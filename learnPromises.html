@@ -1,0 +1,31 @@
+<script type="text/javascript">
+console.log("promise learn prog");
+
+console.log("1");
+console.log("2");
+function abc(){
+	return new Promise(function(resolve,reject){
+		return resolve("promise 1 resolved");
+	});
+}
+function def(){
+	return new Promise(function(resolve,reject){
+		return resolve("promise 2 resolved");
+	});
+}
+function mno(){
+	return new Promise(function(resolve,reject){
+		return resolve("promise 3 is resolve");
+	})
+}
+
+abc().then(function(t){
+	console.log(t);
+	return def();
+}).then(function(m){
+	console.log(m);
+	return mno();
+}).then(function(p){
+	console.log(p);
+});
+</script>
